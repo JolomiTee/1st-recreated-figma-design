@@ -1,0 +1,290 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+html{
+    width: fit-content;
+    
+}
+body{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: philosopher;
+    /* overflow-x: hidden; */
+}
+
+.layout{
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-gap: 0px;
+    margin: 0;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover{
+    color: #fff;
+}
+li{
+    text-decoration: none;
+}
+.planner,
+.main-section{
+    height: 99vh;
+}
+.planner{
+    width: 15vw;
+    display: flex;
+    height: 100vw;
+    flex-direction: column;
+}
+.nav-list{
+    text-align: left;
+    margin: 0;
+    padding: 0px;
+    position: sticky;
+    top: 20px;
+}
+.nav-link:hover{
+    transform: scale(1.1);
+    color: #fff;
+}
+.nav-link{
+    padding: 20px 30px;
+}
+nav
+li a{
+    display: flex;
+    align-items: center;
+}
+li a i{
+    margin-right: 30px;
+}
+.identity img{
+    transform: scale(.5);
+}
+.identity span{
+    margin-left: -25px;
+}
+.main-section{
+    width: 83.7vw;
+}
+.informatics{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr;
+}
+
+/* Progress bar */
+.circle-wrap {
+    width: 150px;
+    height: 150px;
+    background: #fefcff;
+    border-radius: 50%;
+    border: 1px solid #cdcbd0;
+    transform: translateY(-20px);
+    transform: scale(.7);
+    ;;
+}
+  
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+}
+  
+.circle-wrap .circle .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+}
+  
+.circle-wrap .inside-circle {
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    background: #d2eaf1;
+    line-height: 120px;
+    text-align: center;
+    margin-top: 14px;
+    margin-left: 14px;
+    color: #1e51dc;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+}
+  
+/* color animation */
+  
+/* 3rd progress bar */
+.mask .fill {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #227ded;
+}
+  
+.mask.full, .circle .fill {
+    animation: fill ease-in-out 3s;
+    transform: rotate(135deg);
+}
+/* @keyframes fill{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(135deg);
+    }
+} */
+
+
+.project-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.in-progress{
+    padding: 25px;
+    border: 1px solid;
+    display: grid;
+    gap: 30px;
+    height: 50vh;
+}
+.type{
+    display: flex;
+}
+.task-select{
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+}
+.active-task{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    margin: 0;
+    padding: 20px;
+    border-radius: 5px;
+}
+.active-task button{
+    border-radius: 15px;
+    width: 100px;
+    height: 30px;
+}
+.faces{
+    display: flex;
+}
+.face{
+    height: 35px;
+    width: 35px;
+    background: #227ded;
+    border-radius: 50%;
+    text-align: center;
+}
+.face p{
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    color: #fff;
+
+}
+.task-mode{
+    width: 100px;
+    border-radius: 10px;
+    height: 20px;
+    text-align: center;
+}
+.task-mode p{
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    /* padding: 10px !important; */
+}
+
+/* ACTIVITY OVERVIEW */
+
+.calender-head{
+    display: grid;
+    grid-template-columns: .1fr 1fr .1fr;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.arrow{
+    border-radius: 25%;
+    font-size: larger;
+    text-align: center;
+}
+.calendar-body{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 1px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.calendar-des,.activity{
+    padding: 10px;
+}
+.border{
+    border-radius: 5px;
+}
+.dates:hover{
+    border: 1px solid;
+    border-radius: 6px;
+}
+.title{
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+}
+.avatar{
+    border-radius: 50%;
+}
+p small{
+    font-size: smaller;
+}
+.act-desc{
+    padding: 30px 20px 30px 20px;
+    text-align: center;
+    border-left: 2px dashed;
+    margin-left: 50px;
+    transform: translateY(-15px);
+}
+.logo{
+    animation: change ease-in 10s infinite;
+}
+@keyframes change{
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    10% {
+      filter: hue-rotate(60deg);
+    }
+    20% {
+      filter: hue-rotate(90deg);
+    }
+    40% {
+      filter: hue-rotate(180deg);
+    }
+    60% {
+      filter: hue-rotate(235deg);
+    }
+    80% {
+      filter: hue-rotate(275deg);
+    }
+    100% {
+        filter: hue-rotate(330deg);
+    }
+}
+
+
+toggling purple color
+/* .text-primary{
+    color: #6f42c1 !important;
+}
+.bg-primary, .btn-primary{
+    background: #6f42c1 !important;
+    color: #fff !important;
+}
+.border-primary{
+    border-color: #6f42c1 !important;
+} */
